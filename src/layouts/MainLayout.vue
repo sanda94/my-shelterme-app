@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> shelterme</q-toolbar-title>
+        <q-toolbar-title>Xpac</q-toolbar-title>
 
         <div>Version 1.0.0</div>
       </q-toolbar>
@@ -19,7 +19,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Shelter Me </q-item-label>
+        <q-item-label header> Xpac </q-item-label>
 
         <EssentialLink
           v-for="link in linksList"
