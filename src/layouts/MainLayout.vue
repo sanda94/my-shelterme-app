@@ -69,7 +69,7 @@ const linksList = [
     title: "Summary",
     caption: "Summary for Xpac",
     icon: "summarize",
-    link: "/Summary",
+    link: "/SummaryPage",
   },
   {
     title: "Profile",
@@ -84,19 +84,19 @@ const linksList = [
     title: "Users",
     caption: "Users for Xpac",
     icon: "person",
-    link: "/Users",
+    link: "/UsersPage",
   },
   {
     title: "Device",
     caption: "Device Xpac",
     icon: "widgets",
-    link: "/Device",
+    link: "/DevicePage",
   },
   {
     title: "Settings",
     caption: "Settings",
     icon: "manage_accounts",
-    link: "/Settings",
+    link: "/SettingPage",
   },
 ];
 

@@ -7,7 +7,11 @@ const routes = [
       { path: "Index", component: () => import("pages/IndexPage.vue") },
       { path: "AboutPage", component: () => import("pages/AboutPage.vue") },
       { path: "ContactPage", component: () => import("pages/ContactPage.vue") },
-      { path: "ProfilPage", component: () => import("pages/ProfilePage.vue") },
+      { path: "ProfilePage", component: () => import("pages/ProfilePage.vue") },
+      { path: "SummaryPage", component: () => import("pages/SummaryPage.vue") },
+      { path: "UsersPage", component: () => import("pages/UsersPage.vue") },
+      { path: "DevicePage", component: () => import("pages/DevicePage.vue") },
+      { path: "SettingPage", component: () => import("pages/SettingPage.vue") },
     ],
   },
 
