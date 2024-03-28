@@ -19,7 +19,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Xpac </q-item-label>
+        <q-item-label header> Xpac Navigation </q-item-label>
 
         <EssentialLink
           v-for="link in linksList"
@@ -45,46 +45,58 @@ defineOptions({
 
 const linksList = [
   {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev",
+    caption: "MAIN",
   },
   {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
+    title: "Home",
+    caption: "First Page",
+    icon: "home",
+    link: "/index",
   },
   {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev",
+    title: "Aboute Us",
+    caption: "Aboute.Xpac",
+    icon: "diversity_3",
+    link: "/AboutPage",
   },
   {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
+    title: "Contact Us",
+    caption: "Fell Free to Contact Us",
+    icon: "call",
+    link: "/ContactPage",
   },
   {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
+    title: "Summary",
+    caption: "Summary for Xpac",
+    icon: "summarize",
+    link: "/Summary",
   },
   {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev",
+    title: "Profile",
+    caption: "Profile Xpac",
+    icon: "group",
+    link: "/ProfilePage",
   },
   {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev",
+    caption: "GENEREL",
+  },
+  {
+    title: "Users",
+    caption: "Users for Xpac",
+    icon: "person",
+    link: "/Users",
+  },
+  {
+    title: "Device",
+    caption: "Device Xpac",
+    icon: "widgets",
+    link: "/Device",
+  },
+  {
+    title: "Settings",
+    caption: "Settings",
+    icon: "manage_accounts",
+    link: "/Settings",
   },
 ];
 
