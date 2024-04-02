@@ -2,10 +2,10 @@ import './AboutPage.css';
 
 <template>
   <div class="about-page">
-    <h1>About Quasar</h1>
+    <h1>About Us</h1>
 
     <div class="about-content">
-      <p>Quasar is a leading technology company dedicated to...</p>
+      <p>Xpac is a leading technology company dedicated to...</p>
 
       <h2>Our Mission</h2>
       <p>
