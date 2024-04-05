@@ -70,6 +70,10 @@
   </q-page>
 </template>
 
+<q-card-section>
+
+</q-card-section>
+
 <script setup>
 import { ref } from "vue";
 
