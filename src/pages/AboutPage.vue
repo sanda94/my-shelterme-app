@@ -19,8 +19,8 @@ import './AboutPage.css';
         technology that seamlessly integrates...
       </p>
 
-      <h2>Our Core Values</h2>
-      <ul>
+      <h2 class="core-values">Our Core Values</h2>
+      <ul class="core-values-list">
         <li>Innovation</li>
         <li>Integrity</li>
         <li>Collaboration</li>
