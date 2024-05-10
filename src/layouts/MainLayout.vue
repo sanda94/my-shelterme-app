@@ -32,6 +32,24 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <!-- Footer section -->
+    <q-footer elevated>
+      <q-toolbar>
+        <q-btn
+          flat
+          dense
+          round
+          icon="arrow_upward"
+          aria-label="Back to top"
+          @click="scrollToTop"
+        />
+
+        <q-toolbar-title>Xpac</q-toolbar-title>
+
+        <div>© 2024 Xpac. All rights reserved.</div>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -54,8 +72,8 @@ const linksList = [
     link: "/index",
   },
   {
-    title: "Aboute Us",
-    caption: "Aboute.Xpac",
+    title: "About Us",
+    caption: "About Xpac",
     icon: "diversity_3",
     link: "/AboutPage",
   },
@@ -104,5 +122,13 @@ const leftDrawerOpen = ref(false);
 
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
+}
+
+// Function to scroll to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 </script>

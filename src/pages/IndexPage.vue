@@ -67,16 +67,88 @@
         </q-carousel-control>
       </template>
     </q-carousel>
+
+    <!-- New Task Input Field and Button -->
+    <div class="add-task">
+      <input
+        type="text"
+        v-model="newTask"
+        placeholder="Enter a new task"
+        @keyup.enter="addTask"
+      />
+      <q-btn color="primary" @click="addTask">Add Task</q-btn>
+    </div>
+
+    <!-- Display added tasks -->
+    <div class="task-list">
+      <q-list highlight>
+        <q-list-header>Tasks</q-list-header>
+        <q-item v-for="(task, index) in tasks" :key="index">
+          <q-item-main :label="task.name" />
+          <q-item-side
+            icon="check"
+            color="green"
+            @click="completeTask(index)"
+          />
+          <q-item-side
+            icon="delete"
+            color="negative"
+            @click="deleteTask(index)"
+          />
+        </q-item>
+      </q-list>
+    </div>
   </q-page>
 </template>
-
-<q-card-section>
-
-</q-card-section>
 
 <script setup>
 import { ref } from "vue";
 
 const slide = ref(1);
 const autoplay = ref(false);
+const newTask = ref("");
+const tasks = ref([
+  { name: "Wake up", completed: false },
+  { name: "Brush teeth", completed: false },
+  { name: "Shower", completed: false },
+]);
+
+function addTask() {
+  // Implement logic to add the new task
+  if (newTask.value.trim() !== "") {
+    tasks.value.push({ name: newTask.value.trim(), completed: false });
+    // Reset the new task input
+    newTask.value = "";
+  }
+}
+
+function completeTask(index) {
+  // Implement logic to toggle the completion status of the task
+  tasks.value[index].completed = !tasks.value[index].completed;
+}
+
+function deleteTask(index) {
+  // Implement logic to delete the task
+  tasks.value.splice(index, 1);
+}
 </script>
+
+<style scoped>
+.add-task {
+  margin-top: 20px;
+}
+
+.add-task input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-task q-btn {
+  margin-left: 8px;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+</style>
